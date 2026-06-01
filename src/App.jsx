@@ -29,6 +29,19 @@ import { useEffect, useState } from "react";
 import heroClinic from "./assets/hero-clinic.png";
 import microscopeImage from "./assets/dental-microscope.png";
 import familyCareImage from "./assets/family-care.png";
+import drgReszaUtomo from "./assets/drg-resza-utomo.png";
+import drgShafaPrasita from "./assets/drg-shafa-prasita.png";
+import drgAnnisaFurqoni from "./assets/drg-annisa-furqoni.png";
+import bridgePfmBefore from "./assets/bridge-pfm-01-before.png";
+import bridgePfmAfter from "./assets/bridge-pfm-01-after.png";
+import directVeneerBefore from "./assets/direct-veneer-01-before.png";
+import directVeneerAfter from "./assets/direct-veneer-01-after.png";
+import gigiPalsuAkrilikBefore from "./assets/gigi-palsu-akrilik-01-before.png";
+import gigiPalsuAkrilikAfter from "./assets/gigi-palsu-akrilik-01-after.png";
+import gigiPalsuValplastBefore from "./assets/gigi-palsu-valplast-01-before.png";
+import gigiPalsuValplastAfter from "./assets/gigi-palsu-valplast-01-after.png";
+import pasangBehelBefore from "./assets/pasang-behel-01-before.png";
+import pasangBehelAfter from "./assets/pasang-behel-01-after.png";
 
 const whatsappPrimary = "https://api.whatsapp.com/send?phone=6281515337453";
 const googleMapsUrl = "https://www.google.com/maps/search/?api=1&query=ID%20Dental%20Care%20Sidoarjo%20Puri%20Indah%20Suko";
@@ -38,6 +51,7 @@ const navItems = [
   { href: "#layanan", label: "Layanan" },
   { href: "#keunggulan", label: "Keunggulan" },
   { href: "#dokter", label: "Dokter" },
+  { href: "#hasil", label: "Hasil" },
   { href: "#alur", label: "Alur" },
   { href: "#faq", label: "FAQ" },
   { href: "#kontak", label: "Kontak" },
@@ -170,22 +184,68 @@ const contacts = [
 
 const doctors = [
   {
+    name: "drg. Resza Utomo",
+    role: "Prostodontik & Konservasi Gigi",
+    photo: drgReszaUtomo,
+    bio: "Lulusan profesi dokter gigi Universitas Jember dan pernah mengabdi di RS Tentara Dr. Soejdono Magelang. Memiliki passion di bidang prostodonti (gigi palsu) dan conservative dentistry.",
+    focus: ["Gigi palsu / prostodonti", "Perawatan saluran akar", "Restorasi gigi"],
+    schedule: ["Senin – Sabtu: 09.00 – 12.00", "Rabu – Jum'at: 16.00 – 21.00"],
+  },
+  {
+    name: "drg. Shafa Prasita",
+    role: "Dokter Gigi Umum",
+    photo: drgShafaPrasita,
+    bio: "Menyelesaikan pendidikan SMA dalam 2 tahun dan menempuh pendidikan dokter gigi di Universitas Airlangga, lulus sebagai lulusan terbaik.",
+    focus: ["Konsultasi gigi", "Tambal gigi", "Scaling", "Perawatan estetik"],
+    schedule: ["Senin – Kamis: 16.00 – 21.00"],
+  },
+  {
+    name: "drg. Annisa Furqoni",
+    role: "Kedokteran Gigi Anak",
+    photo: drgAnnisaFurqoni,
+    bio: "Lulusan profesi dokter gigi Universitas Jember dan pernah mengabdi di RSU Universitas Sebelas Maret, Sukoharjo, Jawa Tengah. Memiliki passion di bidang kedokteran gigi anak.",
+    focus: ["Perawatan gigi anak", "Konsultasi keluarga", "Edukasi gigi anak"],
+    schedule: ["Jum'at – Minggu: 16.00 – 21.00"],
+  },
+  {
     name: "drg. Reza Al Fessi, Sp.BM",
     role: "Spesialis Bedah Mulut & Maksilofasial",
-    focus: ["Odontektomi", "Kasus impaksi", "Konsultasi tindakan bedah mulut"],
-    schedule: "Jadwal praktik dikonfirmasi melalui admin.",
+    bio: "Dokter spesialis bedah mulut yang menangani tindakan seperti odontektomi (operasi gigi impaksi) dan kasus bedah mulut lainnya.",
+    focus: ["Odontektomi", "Kasus impaksi", "Konsultasi bedah mulut"],
+    schedule: ["Jadwal praktik dikonfirmasi melalui admin"],
+  },
+];
+
+const cases = [
+  {
+    title: "Bridge PFM",
+    text: "Restorasi gigi yang hilang dengan bridge porcelain fused to metal untuk hasil yang rapi dan fungsional.",
+    before: bridgePfmBefore,
+    after: bridgePfmAfter,
   },
   {
-    name: "Dokter Gigi Umum ID Dental Care",
-    role: "Pemeriksaan awal dan perawatan harian",
-    focus: ["Konsultasi gigi", "Tambal gigi", "Scaling", "Perawatan gigi anak"],
-    schedule: "Tanya jadwal dokter umum via WhatsApp.",
+    title: "Direct Veneer",
+    text: "Perbaikan bentuk dan warna gigi depan untuk senyum yang lebih rapi dalam satu kali kunjungan.",
+    before: directVeneerBefore,
+    after: directVeneerAfter,
   },
   {
-    name: "Tim Dokter Spesialis",
-    role: "Rujukan tindakan sesuai kebutuhan kasus",
-    focus: ["Ortodonti", "Konservasi gigi", "Prostodonti", "Tindakan lanjutan"],
-    schedule: "Ketersediaan spesialis mengikuti jadwal klinik.",
+    title: "Gigi Palsu Valplast",
+    text: "Gigi tiruan lepasan fleksibel tanpa kawat yang nyaman dan terlihat lebih natural.",
+    before: gigiPalsuValplastBefore,
+    after: gigiPalsuValplastAfter,
+  },
+  {
+    title: "Gigi Palsu Akrilik",
+    text: "Gigi tiruan lepasan berbahan akrilik sebagai solusi mengembalikan fungsi kunyah dan estetika.",
+    before: gigiPalsuAkrilikBefore,
+    after: gigiPalsuAkrilikAfter,
+  },
+  {
+    title: "Pasang Behel",
+    text: "Perawatan ortodonti untuk merapikan susunan gigi agar lebih sejajar dan mudah dibersihkan.",
+    before: pasangBehelBefore,
+    after: pasangBehelAfter,
   },
 ];
 
@@ -518,10 +578,10 @@ function App() {
             <div className="container">
               <Reveal className="section-heading">
                 <p className="section-kicker">Dokter & Jadwal</p>
-                <h2>Pasien Bisa Tanya Jadwal Dokter Sebelum Datang</h2>
+                <h2>Tim Dokter ID Dental Care dan Jadwal Praktiknya</h2>
                 <p>
-                  Karena jadwal praktik dapat berubah, informasi dokter di bawah menggunakan data yang sudah tersedia
-                  dan jadwal terbaru tetap perlu dikonfirmasi melalui WhatsApp.
+                  Kenali dokter yang menangani perawatan Anda. Jadwal praktik dapat berubah, jadi jadwal terbaru tetap
+                  sebaiknya dikonfirmasi melalui WhatsApp admin sebelum datang.
                 </p>
               </Reveal>
 
@@ -530,11 +590,16 @@ function App() {
                   <Reveal key={doctor.name} delay={index * 0.08}>
                     <article className="doctor-card">
                       <div className="doctor-avatar">
-                        <Stethoscope size={28} aria-hidden="true" />
+                        {doctor.photo ? (
+                          <img src={doctor.photo} alt={`Foto ${doctor.name}`} />
+                        ) : (
+                          <Stethoscope size={28} aria-hidden="true" />
+                        )}
                       </div>
                       <div>
                         <span className="doctor-role">{doctor.role}</span>
                         <h3>{doctor.name}</h3>
+                        {doctor.bio && <p className="doctor-bio">{doctor.bio}</p>}
                         <ul className="check-list compact-list">
                           {doctor.focus.map((item) => (
                             <li key={item}>
@@ -543,15 +608,70 @@ function App() {
                             </li>
                           ))}
                         </ul>
-                        <p className="schedule-note">
+                        <div className="schedule-note">
                           <Clock size={17} aria-hidden="true" />
-                          {doctor.schedule}
-                        </p>
+                          <span>
+                            {doctor.schedule.map((slot) => (
+                              <span key={slot} className="schedule-slot">
+                                {slot}
+                              </span>
+                            ))}
+                          </span>
+                        </div>
                       </div>
                     </article>
                   </Reveal>
                 ))}
               </div>
+            </div>
+          </section>
+
+          <section id="hasil" className="section results-section">
+            <div className="container">
+              <Reveal className="section-heading">
+                <p className="section-kicker">Before & After</p>
+                <h2>Beberapa Hasil Perawatan di ID Dental Care Sidoarjo</h2>
+                <p>
+                  Geser untuk melihat perbandingan sebelum dan sesudah perawatan. Hasil dapat berbeda pada setiap pasien
+                  tergantung kondisi gigi dan rencana perawatan dari dokter.
+                </p>
+              </Reveal>
+
+              <div className="results-grid">
+                {cases.map((item, index) => (
+                  <Reveal key={item.title} delay={index * 0.07}>
+                    <article className="result-card">
+                      <div className="result-media">
+                        <figure>
+                          <img src={item.before} alt={`Sebelum ${item.title}`} loading="lazy" />
+                          <figcaption>Sebelum</figcaption>
+                        </figure>
+                        <figure>
+                          <img src={item.after} alt={`Sesudah ${item.title}`} loading="lazy" />
+                          <figcaption className="after">Sesudah</figcaption>
+                        </figure>
+                      </div>
+                      <div className="result-body">
+                        <h3>{item.title}</h3>
+                        <p>{item.text}</p>
+                      </div>
+                    </article>
+                  </Reveal>
+                ))}
+              </div>
+
+              <Reveal delay={0.12}>
+                <div className="inline-cta">
+                  <div>
+                    <strong>Ingin tahu hasil seperti apa yang bisa dicapai untuk kondisi gigi Anda?</strong>
+                    <span>Kirim foto dan keluhan Anda lewat WhatsApp, admin akan bantu arahkan ke dokter yang tepat.</span>
+                  </div>
+                  <a className="button button-primary" href={whatsappPrimary} target="_blank" rel="noreferrer">
+                    <MessageCircle size={18} aria-hidden="true" />
+                    Konsultasi Hasil Perawatan
+                  </a>
+                </div>
+              </Reveal>
             </div>
           </section>
 
