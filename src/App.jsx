@@ -60,8 +60,8 @@ const navItems = [
 const proofs = [
   {
     icon: UserRoundCheck,
-    title: "Dokter Umum & Spesialis",
-    text: "Pasien bisa memulai dari pemeriksaan umum, lalu diarahkan ke dokter spesialis bila membutuhkan tindakan lanjutan.",
+    title: "Tim Dokter Gigi",
+    text: "Pasien bisa memulai dari pemeriksaan umum, lalu dokter menjelaskan pilihan perawatan sesuai kondisi gigi.",
   },
   {
     icon: Microscope,
@@ -109,11 +109,11 @@ const serviceGroups = [
     imageAlt: "Ilustrasi konsultasi perawatan estetik gigi",
   },
   {
-    key: "spesialis",
-    label: "Spesialis",
-    title: "Dukungan dokter spesialis untuk kasus lebih kompleks.",
-    copy: "Untuk kasus yang membutuhkan analisis lebih mendalam, pasien dapat diarahkan ke dokter spesialis sesuai kebutuhan perawatan.",
-    items: ["Ortodonti", "Bedah mulut", "Konservasi gigi", "Prostodonti", "Rujukan tindakan lanjutan"],
+    key: "lanjutan",
+    label: "Lanjutan",
+    title: "Perawatan lanjutan sesuai hasil pemeriksaan dokter.",
+    copy: "Untuk kasus yang membutuhkan analisis lebih mendalam, dokter akan menjelaskan opsi perawatan, batas layanan klinik, dan arahan rujukan bila diperlukan.",
+    items: ["Perawatan saluran akar", "Gigi tiruan", "Bridge", "Behel", "Arahan rujukan bila diperlukan"],
     icon: Stethoscope,
     image: microscopeImage,
     imageAlt: "Ilustrasi ruang perawatan dengan dental microscope",
@@ -123,8 +123,8 @@ const serviceGroups = [
 const advantages = [
   {
     icon: UserRoundCheck,
-    title: "Dokter Umum & Spesialis",
-    text: "Pemeriksaan awal bisa dimulai dari dokter gigi umum, lalu diarahkan sesuai kebutuhan kasus pasien.",
+    title: "Dokter Gigi Berpengalaman",
+    text: "Pemeriksaan awal dilakukan oleh dokter gigi, lalu pasien mendapat penjelasan opsi perawatan sesuai kondisi kasus.",
   },
   {
     icon: Microscope,
@@ -143,8 +143,8 @@ const advantages = [
   },
   {
     icon: Smile,
-    title: "Keluarga, Estetik, dan Spesialis",
-    text: "Satu klinik untuk pemeriksaan rutin, perawatan anak, kebutuhan estetik, dan tindakan lanjutan.",
+    title: "Keluarga, Estetik, dan Lanjutan",
+    text: "Satu klinik untuk pemeriksaan rutin, perawatan anak, kebutuhan estetik, dan perawatan lanjutan sesuai indikasi.",
   },
   {
     icon: Video,
@@ -166,7 +166,7 @@ const journey = [
   },
   {
     title: "Tindakan Perawatan",
-    text: "Perawatan dilakukan sesuai kebutuhan, mulai dari tindakan ringan sampai spesialis.",
+    text: "Perawatan dilakukan sesuai kebutuhan, mulai dari tindakan ringan sampai perawatan lanjutan.",
     icon: Smile,
   },
   {
@@ -185,10 +185,10 @@ const contacts = [
 const doctors = [
   {
     name: "drg. Resza Utomo",
-    role: "Prostodontik & Konservasi Gigi",
+    role: "Gigi Tiruan & Perawatan Restoratif",
     photo: drgReszaUtomo,
-    bio: "Lulusan profesi dokter gigi Universitas Jember dan pernah mengabdi di RS Tentara Dr. Soejdono Magelang. Memiliki passion di bidang prostodonti (gigi palsu) dan conservative dentistry.",
-    focus: ["Gigi palsu / prostodonti", "Perawatan saluran akar", "Restorasi gigi"],
+    bio: "Lulusan profesi dokter gigi Universitas Jember dan pernah mengabdi di RS Tentara Dr. Soejdono Magelang. Memiliki minat pada perawatan gigi tiruan dan perawatan gigi konservatif.",
+    focus: ["Gigi palsu", "Perawatan saluran akar", "Restorasi gigi"],
     schedule: ["Senin – Sabtu: 09.00 – 12.00", "Rabu – Jum'at: 16.00 – 21.00"],
   },
   {
@@ -201,18 +201,11 @@ const doctors = [
   },
   {
     name: "drg. Annisa Furqoni",
-    role: "Kedokteran Gigi Anak",
+    role: "Minat Perawatan Gigi Anak",
     photo: drgAnnisaFurqoni,
     bio: "Lulusan profesi dokter gigi Universitas Jember dan pernah mengabdi di RSU Universitas Sebelas Maret, Sukoharjo, Jawa Tengah. Memiliki passion di bidang kedokteran gigi anak.",
     focus: ["Perawatan gigi anak", "Konsultasi keluarga", "Edukasi gigi anak"],
     schedule: ["Jum'at – Minggu: 16.00 – 21.00"],
-  },
-  {
-    name: "drg. Reza Al Fessi, Sp.BM",
-    role: "Spesialis Bedah Mulut & Maksilofasial",
-    bio: "Dokter spesialis bedah mulut yang menangani tindakan seperti odontektomi (operasi gigi impaksi) dan kasus bedah mulut lainnya.",
-    focus: ["Odontektomi", "Kasus impaksi", "Konsultasi bedah mulut"],
-    schedule: ["Jadwal praktik dikonfirmasi melalui admin"],
   },
 ];
 
@@ -243,7 +236,7 @@ const cases = [
   },
   {
     title: "Pasang Behel",
-    text: "Perawatan ortodonti untuk merapikan susunan gigi agar lebih sejajar dan mudah dibersihkan.",
+    text: "Perawatan behel untuk membantu merapikan susunan gigi agar lebih sejajar dan mudah dibersihkan.",
     before: pasangBehelBefore,
     after: pasangBehelAfter,
   },
@@ -261,9 +254,9 @@ const faqs = [
       "Ya, ID Dental Care melayani pemeriksaan dan perawatan gigi keluarga, termasuk anak-anak, sesuai kondisi pasien.",
   },
   {
-    question: "Apakah tersedia dokter spesialis?",
+    question: "Apakah semua tindakan bisa dilakukan di klinik?",
     answer:
-      "Untuk kasus tertentu, pasien dapat diarahkan ke dokter spesialis sesuai kebutuhan perawatan dan jadwal yang tersedia.",
+      "Tidak selalu. Dokter akan memeriksa kondisi pasien terlebih dahulu, lalu menjelaskan pilihan perawatan di klinik atau arahan rujukan bila kasus membutuhkan penanganan di luar layanan yang tersedia.",
   },
   {
     question: "Apakah biaya bisa ditanyakan dulu?",
@@ -385,9 +378,9 @@ function App() {
               >
                 <p className="eyebrow">
                   <Sparkles size={16} aria-hidden="true" />
-                  Klinik gigi umum & spesialis di Sidoarjo
+                  Klinik gigi keluarga dan estetik di Sidoarjo
                 </p>
-                <h1>Perawatan Gigi Umum, Estetik, dan Spesialis di Sidoarjo</h1>
+                <h1>Perawatan Gigi Umum, Keluarga, dan Estetik di Sidoarjo</h1>
                 <p className="hero-lead">
                   Mulai dari konsultasi awal, pemeriksaan, tindakan perawatan, hingga kontrol lanjutan dengan alur
                   yang mudah melalui WhatsApp.
@@ -416,8 +409,8 @@ function App() {
                 </div>
                 <div className="hero-stats">
                   <div>
-                    <strong>Dokter umum & spesialis</strong>
-                    <span>Mulai dari pemeriksaan awal sampai tindakan lanjutan.</span>
+                    <strong>Tim dokter gigi</strong>
+                    <span>Mulai dari pemeriksaan awal sampai rencana perawatan.</span>
                   </div>
                   <div>
                     <strong>Konsultasi awal via WhatsApp</strong>
@@ -436,7 +429,7 @@ function App() {
             <div className="container">
               <Reveal className="section-heading">
                 <p className="section-kicker">Tentang Klinik</p>
-                <h2>Satu Klinik untuk Kebutuhan Gigi Keluarga, Estetik, dan Spesialis</h2>
+                <h2>Satu Klinik untuk Kebutuhan Gigi Keluarga, Estetik, dan Perawatan Lanjutan</h2>
                 <p>
                   ID Dental Care Sidoarjo membantu pasien mendapatkan perawatan gigi yang lebih jelas, nyaman, dan
                   terarah sejak konsultasi pertama.
@@ -461,7 +454,7 @@ function App() {
             <div className="container service-layout">
               <Reveal className="section-heading compact">
                 <p className="section-kicker">Layanan Klinik</p>
-                <h2>Pilihan Perawatan untuk Keluhan Harian, Estetik, dan Kasus Spesialis</h2>
+                <h2>Pilihan Perawatan untuk Keluhan Harian, Estetik, dan Kebutuhan Lanjutan</h2>
               </Reveal>
 
               <Reveal delay={0.08} className="service-tabs" aria-label="Kategori layanan">
@@ -840,7 +833,7 @@ function App() {
                     <span className="brand-mark">ID</span>
                     <div>
                       <strong>ID Dental Care Sidoarjo</strong>
-                      <small>Klinik gigi umum & spesialis</small>
+                      <small>Klinik gigi keluarga dan estetik</small>
                     </div>
                   </div>
                   <div className="contact-list">
@@ -870,7 +863,7 @@ function App() {
             <div>
               <span className="footer-brand">ID Dental Care Sidoarjo</span>
               <p>
-                Klinik gigi umum dan spesialis di kawasan Puri Indah, Suko, Sidoarjo. Informasi di website tidak
+                Klinik gigi keluarga dan estetik di kawasan Puri Indah, Suko, Sidoarjo. Informasi di website tidak
                 menggantikan pemeriksaan langsung oleh dokter gigi.
               </p>
             </div>
@@ -878,8 +871,8 @@ function App() {
               <strong>Layanan Utama</strong>
               <a href="#layanan">Tambal, scaling, dan konsultasi</a>
               <a href="#layanan">Perawatan gigi anak</a>
-              <a href="#layanan">Estetik dan prostodontik</a>
-              <a href="#layanan">Tindakan spesialis</a>
+              <a href="#layanan">Estetik dan gigi tiruan</a>
+              <a href="#layanan">Perawatan lanjutan</a>
             </div>
             <div>
               <strong>Kontak</strong>
