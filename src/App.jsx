@@ -26,9 +26,9 @@ import {
   X,
 } from "lucide-react";
 import { useEffect, useState } from "react";
-import heroClinic from "./assets/hero-clinic.png";
-import microscopeImage from "./assets/dental-microscope.png";
-import familyCareImage from "./assets/family-care.png";
+import heroClinic from "./assets/hero-clinic-2.jpeg";
+import microscopeImage from "./assets/dental-microscope-2.jpeg";
+import familyCareImage from "./assets/family-care-2.jpeg";
 import drgReszaUtomo from "./assets/drg-resza-utomo.png";
 import drgShafaPrasita from "./assets/drg-shafa-prasita.png";
 import drgAnnisaFurqoni from "./assets/drg-annisa-furqoni.png";
